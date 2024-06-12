@@ -1,13 +1,12 @@
 import React from 'react';
 import { Box, Typography,Container } from '@mui/material';
-
+import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 const Footer = () => {
   return (
-    <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: (theme) => theme.palette.grey[200] }}>
+    <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto'}} >
       <Container maxWidth="sm">
-        <Typography variant="body1">Rolling</Typography>
-        <Typography variant="body2" color="text.secondary">
-          © 2024 by Jordi & Gonzalo
+        <Typography>
+          Made with <FavoriteTwoToneIcon /> by Gonzalo and Jordi
         </Typography>
       </Container>
     </Box>

@@ -7,6 +7,8 @@ import RankingWinners from './components/Rankings/RankingWinners';
 import RankingLosers from './components/Rankings/RankingLosers';
 import AllPlayers from './components/Players/AllPlayers';
 import CreatePlayer from './components/Players/CreatePlayer';
+import Dice from './components/Dice'
+
 function App() {
   return (
     <ThemeToggle>
@@ -20,7 +22,13 @@ function App() {
           {/* <AllPlayers /> */}
         </Box>
       </Container>
-      <Footer />
+      <Container component="main" sx={{ mt: 8, mb: 2 }}>
+          <Dice/>
+      </Container>
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Footer />
+      </Box>
+
     </ThemeToggle>
   );
 }
