@@ -15,15 +15,19 @@ export default function Dices(){
             'Content-Type': 'application/json',
           },
         })
-        .then(response => {
-          console.log(response.data)
-          setDice(response)
+        .then( response => response.json() )
+        .then( data => { 
+          setDice(data)
+          console.log(data[0].dice1)
+        })
+        .catch(( error ) => {
+        console.log(error)
         })
     },[])
       return(
-        <Box sx={{ my: 4 }} display="flex" justifyContent="center" alignItems="center" minHeight="63vh">
-          <Dice cheatValue={dice.dice1}/>
-          <Dice cheatValue={dice.dice2}/>
+        <Box sx={{ my: 4 }} display="flex" justifyContent="center" alignItems="center" minHeight="63vh" >
+          {dice[0] && <Dice triggers = "a" cheatValue={dice[0].dice1} size = {200} margin-right={30}/>}
+          {dice[0] && <Dice triggers = "a" cheatValue={dice[0].dice2} size = {200} margin-left={30}/>}
         </Box>
       )
 }
