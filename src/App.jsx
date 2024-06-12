@@ -6,16 +6,18 @@ import Ranking from './components/Rankings/Ranking';
 import RankingWinners from './components/Rankings/RankingWinners';
 import RankingLosers from './components/Rankings/RankingLosers';
 import AllPlayers from './components/Players/AllPlayers';
+import CreatePlayer from './components/Players/CreatePlayer';
 function App() {
   return (
     <ThemeToggle>
       <Navbar/>
-      <Container component="main" sx={{ mt: 8, mb: 2 }}>
+      <Container component="main" sx={{ mt: 10, mb: 2 }}>
         <Box sx={{ my: 4 }}>
           {/* <Ranking />
           <RankingWinners />
           <RankingLosers /> */}
-          <AllPlayers />
+          {/* <CreatePlayer /> */}
+          {/* <AllPlayers /> */}
         </Box>
       </Container>
       <Footer />
