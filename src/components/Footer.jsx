@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <Box component="footer" sx={{ py: 3, px: 2, mt: 'auto', backgroundColor: (theme) => theme.palette.grey[200] }}>
       <Container maxWidth="sm">
-        <Typography variant="body1">Your Footer Content Here.</Typography>
+        <Typography variant="body1">Rolling</Typography>
         <Typography variant="body2" color="text.secondary">
-          © 2024 Your Company
+          © 2024 by Jordi & Gonzalo
         </Typography>
       </Container>
     </Box>
