@@ -13,10 +13,6 @@ export const lightTheme = createTheme({
           main: '#831f0f',
         },
       },
-      typography: {
-        fontSize: 12,
-        fontWeightLight: 100,
-      },
   });
   
 export const darkTheme = createTheme({
@@ -31,9 +27,5 @@ export const darkTheme = createTheme({
         info: {
           main: '#831f0f',
         },
-      },
-      typography: {
-        fontSize: 12,
-        fontWeightLight: 100,
       },
 });
