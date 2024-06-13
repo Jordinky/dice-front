@@ -9,6 +9,7 @@ import AllPlayers from './components/Players/AllPlayers';
 import CreatePlayer from './components/Players/CreatePlayer';
 import Dice from './components/Dice'
 import DeleteGames from './components/Players/DeleteGames';
+import CreateGame from './components/Games/CreateGame';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </Container> */}
       <Container component="main" sx={{ mt: 10, mb: 2 }}>
         <Box sx={{ my: 4 }}>
+          <CreateGame />
           <DeleteGames />
           {/* <Ranking />
           <RankingWinners />
