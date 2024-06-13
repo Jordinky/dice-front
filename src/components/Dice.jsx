@@ -25,9 +25,13 @@ export default function Dices(){
         })
     },[])
       return(
+        <div className="rolling_dices">
+
         <Box sx={{ my: 4 }} display="flex" justifyContent="center" alignItems="center" minHeight="63vh" >
-          {dice[0] && <Dice triggers = "a" cheatValue={dice[0].dice1} size = {200} margin-right={30}/>}
-          {dice[0] && <Dice triggers = "a" cheatValue={dice[0].dice2} size = {200} margin-left={30}/>}
+          {dice[0] && <Dice triggers = "Enter" cheatValue={dice[0].dice2} size = {200} margin={50}/>}
+          {dice[0] && <Dice triggers = "Enter" cheatValue={dice[0].dice1} size = {200} margin={50}/>}
         </Box>
+          <h4>Presiona Enter, para lanzar una partida...</h4>
+        </div>
       )
 }
