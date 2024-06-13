@@ -9,7 +9,9 @@ import AllPlayers from './components/Players/AllPlayers';
 import CreatePlayer from './components/Players/CreatePlayer';
 import Dice from './components/Dice'
 import Welcome from './components/Welcome';
-import { StateProvider } from '../src/components/PlayerReducer';
+import { StateProvider } from '../src/components/PlayerReducer';import DeleteGames from './components/Players/DeleteGames';
+import CreateGame from './components/Games/CreateGame';
+
 
 function App() {
   return (
@@ -20,6 +22,17 @@ function App() {
       <Container component="main" sx={{ mt: 8, mb: 2 }}>
           <Dice/>
       </Container> 
+      <Container component="main" sx={{ mt: 10, mb: 2 }}>
+        <Box sx={{ my: 4 }}>
+          <CreateGame />
+          <DeleteGames />
+          {/* <Ranking />
+          <RankingWinners />
+          <RankingLosers /> */}
+          <AllPlayers />
+          {/* <CreatePlayer /> */}
+        </Box>
+      </Container>
       <Box display="flex" justifyContent="center" alignItems="center">
         <Footer />
       </Box>
