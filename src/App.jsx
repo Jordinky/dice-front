@@ -11,13 +11,14 @@ import Dice from './components/Dice'
 import DeleteGames from './components/Players/DeleteGames';
 import CreateGame from './components/Games/CreateGame';
 
+
 function App() {
   return (
     <ThemeToggle>
       <Navbar/>
-      {/* <Container component="main" sx={{ mt: 8, mb: 2 }}>
+      <Container component="main" sx={{ mt: 8, mb: 2 }}>
           <Dice/>
-      </Container> */}
+      </Container> 
       <Container component="main" sx={{ mt: 10, mb: 2 }}>
         <Box sx={{ my: 4 }}>
           <CreateGame />
@@ -32,7 +33,6 @@ function App() {
       <Box display="flex" justifyContent="center" alignItems="center">
         <Footer />
       </Box>
-
     </ThemeToggle>
   );
 }
