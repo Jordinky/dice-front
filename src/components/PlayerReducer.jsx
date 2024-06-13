@@ -1,9 +1,9 @@
 // StateProvider.js
-import React, { createContext, useReducer, useContext } from 'react';
+import { createContext, useReducer, useContext } from 'react';
 
 const initialState = {
   isAuthenticated: false,
-  user: "jordi",
+  user: "Default",
 };
 
 const StateContext = createContext();

@@ -26,6 +26,7 @@ export default function Welcome() {
       <p>Welcome to the dice game {state.user}</p>
     </div>
     <span id="typed"></span>
+    <p>Welcome to the dice game {state.user}</p>
     </Box>
   );
 }

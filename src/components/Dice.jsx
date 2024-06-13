@@ -18,7 +18,6 @@ export default function Dices(){
         .then( response => response.json() )
         .then( data => { 
           setDice(data)
-          console.log(data[0].dice1)
         })
         .catch(( error ) => {
         console.log(error)
