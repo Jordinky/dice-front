@@ -8,22 +8,24 @@ import RankingLosers from './components/Rankings/RankingLosers';
 import AllPlayers from './components/Players/AllPlayers';
 import CreatePlayer from './components/Players/CreatePlayer';
 import Dice from './components/Dice'
+import DeleteGames from './components/Players/DeleteGames';
 
 function App() {
   return (
     <ThemeToggle>
       <Navbar/>
+      {/* <Container component="main" sx={{ mt: 8, mb: 2 }}>
+          <Dice/>
+      </Container> */}
       <Container component="main" sx={{ mt: 10, mb: 2 }}>
         <Box sx={{ my: 4 }}>
+          <DeleteGames />
           {/* <Ranking />
           <RankingWinners />
           <RankingLosers /> */}
+          <AllPlayers />
           {/* <CreatePlayer /> */}
-          {/* <AllPlayers /> */}
         </Box>
-      </Container>
-      <Container component="main" sx={{ mt: 8, mb: 2 }}>
-          <Dice/>
       </Container>
       <Box display="flex" justifyContent="center" alignItems="center">
         <Footer />
