@@ -4,7 +4,9 @@ import { createContext, useReducer, useContext } from 'react';
 const initialState = {
   isAuthenticated: false,
   user: "Default",
-  id: "0"
+  id: "2",
+  dice1: "1",
+  dice2: "2"
 };
 
 const StateContext = createContext();
@@ -15,8 +17,8 @@ const reducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: true,
-        user: action.payload,
-        id:action.payload,
+        user: action.payload.name,
+        id: action.payload.id,
       };
     case 'LOGOUT':
       return {
@@ -25,6 +27,12 @@ const reducer = (state, action) => {
         user: null,
         id: null,
       };
+    case 'GETDICEVAL':
+        return{
+          ...state,
+          dice1: action.payload.dice1,
+          dice2: action.payload.dice2
+        }
     default:
       return state;
   }

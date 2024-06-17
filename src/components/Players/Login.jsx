@@ -1,10 +1,10 @@
 import { useState } from "react"
 import TextField from '@mui/material/TextField';
 import {Button}  from '@mui/material';
-import { useStateValue } from "../Players/PlayerReducer";
+import { useStateValue } from "./AppProvider";
 
 export default function Login(){
-    const [player,setplayer] = useState(null)
+    const [player,setplayer] = useState("")
     const [playerError,setPlayerError] = useState(false)
     const {dispatch} = useStateValue();
 
@@ -24,13 +24,14 @@ export default function Login(){
               });
             if (response.ok) {
                 const data = await response.json();
+                console.log(data)
                 if(data.data){
                     setplayer(data)
                     setPlayerError(false) 
                     console.log(data.data.name)
                     dispatch({
                         type: 'LOGIN',
-                        payload: data.data.name,
+                        payload: data.data,
                       });
                 }else{
                     alert("user doesn't exist")
@@ -45,6 +46,7 @@ export default function Login(){
         <form onSubmit={handleSubmit}>
             <TextField label="Username" color = "primary" size = "small" variant="outlined" required error = {playerError} onChange={e => setplayer(e.target.value)}/>
             <Button color="primary" size = "small" type="submit" variant="outlined">LogIn</Button>
+            <Button color="primary" size = "small" type="submit" variant="outlined">LogOut</Button>
         </form>
     </>
     )

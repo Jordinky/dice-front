@@ -9,7 +9,7 @@ import AllPlayers from './components/Players/AllPlayers';
 //import CreatePlayer from './components/Players/CreatePlayer';
 import Dice from './components/Games/Dice'
 import Welcome from './components/layout/Welcome';
-import { StateProvider } from '../src/components/Players/PlayerReducer';
+import { StateProvider } from './components/Players/AppProvider';
 import DeleteGames from './components/Players/DeleteGames';
 import CreateGame from './components/Games/CreateGame';
 

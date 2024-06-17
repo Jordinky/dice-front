@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { useStateValue } from "../Players/PlayerReducer";
+import { useStateValue } from "../Players/AppProvider";
 
 export default function CreateGame(){
 
     const [playerID, setPlayerID] = useState(null);
     const [dice1, setDice1] = useState(0);
     const [dice2, setDice2] = useState(0);
-    const {dispatch} = useStateValue();
+    const {state,dispatch} = useStateValue();
     
     const handleSubmit = async (event) => {
-    const url = `http://localhost:3000/api/games/${playerID}`
+    const url = `http://localhost:3000/api/games/${state.id}`
         
     event.preventDefault(); 
     try{
@@ -19,19 +19,23 @@ export default function CreateGame(){
             'Content-Type': 'application/json',
             }
         });
-
-    if (response.ok){
-        const data = await response.json()
-        if (data.data ) {
-            setPlayerID(data.data.id)
-            console("dados"+data.dice1,data.dice2)
-            setDice1(data.dice1)
-            setDice2(data.dice2)
-            console.log('Partida creada con éxito')
-            } else {
-            console.log('Error al crear la partida')
-            }
-        }  
+        if (response.ok){
+            const data = await response.json()
+            console.log(data)
+            if (data ) {
+                console.log("dados"+data.dice1,data.dice2)
+                setDice1(data.dice1)
+                setDice2(data.dice2)
+                dispatch({
+                    type: 'GETDICEVAL',
+                    payload: data
+                })
+                console.log('Partida creada con éxito')
+                } else {
+                console.log(url)
+                console.log('Error al crear la partida')
+                }
+            }  
     }catch(error){
         console.log(error)
     }
@@ -44,12 +48,6 @@ export default function CreateGame(){
             <div className="login-form">
                 <form onSubmit={handleSubmit}>
                     <h2>Tirar una partida </h2>
-                    <input
-                    type="text"
-                    placeholder="ID del jugador"
-                    value={playerID}
-                    onChange={(e) => setPlayerID(e.target.value)}
-                    />
                     <button type="submit">I feel lucky!</button>
                 </form>
             </div>

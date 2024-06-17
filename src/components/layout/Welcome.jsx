@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import Typed from 'typed.js';
 import { Box } from '@mui/material';
-import {useStateValue } from '../Players/PlayerReducer'
+import {useStateValue } from '../Players/AppProvider'
 
 export default function Welcome() {
 
@@ -21,7 +21,7 @@ export default function Welcome() {
   }, []);
  */
   return (
-    <Box sx={{ my: 4 }} display="flex" justifyContent="center" alignItems="center">
+    <Box sx={{ my: 2 }} display="flex" justifyContent="center" alignItems="center">
 {/*     <div id="typed-strings">
       <p>Welcome to the dice game {state.user}</p>
     </div>
