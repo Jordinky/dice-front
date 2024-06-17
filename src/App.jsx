@@ -7,21 +7,23 @@ import Footer from './components/layout/Footer';
 //import RankingLosers from './components/Rankings/RankingLosers';
 import AllPlayers from './components/Players/AllPlayers';
 //import CreatePlayer from './components/Players/CreatePlayer';
-import Dice from './components/Games/Dice'
+
 import Welcome from './components/layout/Welcome';
 import { StateProvider } from './components/Players/AppProvider';
 import DeleteGames from './components/Players/DeleteGames';
 import CreateGame from './components/Games/CreateGame';
-
+import AppRouterProvider from './components/layout/AppRouterProvider';
 
 function App() {
   return (
     <ThemeToggle>
       <StateProvider>
       <Navbar/>
+
+
       <Welcome />
       <Container component="main">
-          <Dice/>
+      <AppRouterProvider/>
       </Container> 
       <Container component="main">
         <Box sx={{ my: 4 }}>
