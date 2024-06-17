@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useStateValue } from "../Players/AppProvider";
+import Dices from './Dices';
 
 export default function CreateGame(){
 
-    const [playerID, setPlayerID] = useState(null);
     const [dice1, setDice1] = useState(0);
     const [dice2, setDice2] = useState(0);
     const {state,dispatch} = useStateValue();
@@ -44,18 +44,15 @@ export default function CreateGame(){
 
     return (
         <div className='NewPlayer'>
-        <h1>Jugadores 👤</h1>
+        <h1>Te sientes con suerte? 🎲🎲</h1>
             <div className="login-form">
                 <form onSubmit={handleSubmit}>
-                    <h2>Tirar una partida </h2>
-                    <button type="submit">I feel lucky!</button>
+                    <button type="submit">Nueva partida</button>
                 </form>
             </div>
+            <Dices />
             <section className='results'>
-            <h2>Resultados:</h2>
-            <h3 style={{display: 'inline-block'} }>{dice1}</h3>
-            <span>-</span>
-            <h3 style={{display: 'inline-block'} }>{dice2}</h3>
+                
             </section>
         </div>
   )
