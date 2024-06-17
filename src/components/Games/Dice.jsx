@@ -25,7 +25,7 @@ export default function Dices(){
     },[])
       return(
         <div className="rolling_dices">
-        <Box sx={{ my: 4 }} display="flex" justifyContent="center" alignItems="center" minHeight="63vh" >
+        <Box sx={{ my: 2 }} display="flex" justifyContent="center" alignItems="center" minHeight="10vh" >
           {dice[0] && <Dice triggers = "Enter" cheatValue={dice[0].dice2} size = {200} margin={50}/>}
           {dice[0] && <Dice triggers = "Enter" cheatValue={dice[0].dice1} size = {200} margin={50}/>}
         </Box>

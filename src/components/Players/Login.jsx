@@ -1,10 +1,10 @@
 import { useState } from "react"
 import TextField from '@mui/material/TextField';
 import {Button}  from '@mui/material';
-import { useStateValue } from "../PlayerReducer";
+import { useStateValue } from "../Players/PlayerReducer";
 
 export default function Login(){
-    const [player,setplayer] = useState("")
+    const [player,setplayer] = useState(null)
     const [playerError,setPlayerError] = useState(false)
     const {dispatch} = useStateValue();
 

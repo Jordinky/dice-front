@@ -4,6 +4,7 @@ import { createContext, useReducer, useContext } from 'react';
 const initialState = {
   isAuthenticated: false,
   user: "Default",
+  id: "0"
 };
 
 const StateContext = createContext();
@@ -15,12 +16,14 @@ const reducer = (state, action) => {
         ...state,
         isAuthenticated: true,
         user: action.payload,
+        id:action.payload,
       };
     case 'LOGOUT':
       return {
         ...state,
         isAuthenticated: false,
         user: null,
+        id: null,
       };
     default:
       return state;

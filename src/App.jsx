@@ -1,15 +1,16 @@
-import ThemeToggle from './components/ThemeToggle';
+import ThemeToggle from './components/layout/ThemeToggle';
 import { Container, Box } from '@mui/material';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Ranking from './components/Rankings/Ranking';
-import RankingWinners from './components/Rankings/RankingWinners';
-import RankingLosers from './components/Rankings/RankingLosers';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+//import Ranking from './components/Rankings/Ranking';
+//import RankingWinners from './components/Rankings/RankingWinners';
+//import RankingLosers from './components/Rankings/RankingLosers';
 import AllPlayers from './components/Players/AllPlayers';
-import CreatePlayer from './components/Players/CreatePlayer';
-import Dice from './components/Dice'
-import Welcome from './components/Welcome';
-import { StateProvider } from '../src/components/PlayerReducer';import DeleteGames from './components/Players/DeleteGames';
+//import CreatePlayer from './components/Players/CreatePlayer';
+import Dice from './components/Games/Dice'
+import Welcome from './components/layout/Welcome';
+import { StateProvider } from '../src/components/Players/PlayerReducer';
+import DeleteGames from './components/Players/DeleteGames';
 import CreateGame from './components/Games/CreateGame';
 
 
@@ -19,10 +20,10 @@ function App() {
       <StateProvider>
       <Navbar/>
       <Welcome />
-      <Container component="main" sx={{ mt: 8, mb: 2 }}>
+      <Container component="main">
           <Dice/>
       </Container> 
-      <Container component="main" sx={{ mt: 10, mb: 2 }}>
+      <Container component="main">
         <Box sx={{ my: 4 }}>
           <CreateGame />
           <DeleteGames />
