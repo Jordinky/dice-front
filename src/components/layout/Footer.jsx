@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography,Container } from '@mui/material';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 const Footer = () => {

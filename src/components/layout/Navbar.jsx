@@ -1,7 +1,4 @@
-
 import { AppBar, Toolbar, Typography } from '@mui/material';
-
-
 import Login from '../Players/Login';
 
 const Navbar = () => {

@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+
 export default function Ranking(){
 
   const [rankings, setRanking] = useState([]);
@@ -29,16 +30,6 @@ export default function Ranking(){
 
   return (
     <>
-    {/* <div>
-      <ul>
-      {rankings.map((ranking, index) => (
-        <li key={index}>
-        {ranking.name} - {ranking.totalGames}
-        </li>
-        ))}
-        </ul>
-        </div> */}
-
     <div>
       <h1>Ranking total de jugadores 🏁</h1>
       <TableContainer component={Paper}>

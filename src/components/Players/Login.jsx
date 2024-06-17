@@ -43,10 +43,10 @@ export default function Login(){
     }
     return(
     <>
-        <form onSubmit={handleSubmit}>
-            <TextField label="Username" color = "primary" size = "small" variant="outlined" required error = {playerError} onChange={e => setplayer(e.target.value)}/>
-            <Button color="primary" size = "small" type="submit" variant="outlined">LogIn</Button>
-            <Button color="primary" size = "small" type="submit" variant="outlined">LogOut</Button>
+        <form onSubmit={handleSubmit} >
+            <TextField label="Player ID" color = "secondary" size = "small" variant="outlined" required error = {playerError} onChange={e => setplayer(e.target.value)}/>
+            <Button color="secondary" size = "small" type="submit" variant="outlined" style={{marginLeft: 25}}>LogIn</Button>
+            {/* <Button color="primary" size = "small" type="submit" variant="outlined">LogOut</Button> */}
         </form>
     </>
     )
