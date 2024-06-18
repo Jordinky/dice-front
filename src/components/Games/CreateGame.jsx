@@ -1,11 +1,8 @@
-import { useState } from 'react';
+
 import { useStateValue } from "../Players/AppProvider";
-import Dices from './Dices';
+
 
 export default function CreateGame(){
-
-    const [dice1, setDice1] = useState(0);
-    const [dice2, setDice2] = useState(0);
     const {state,dispatch} = useStateValue();
     
     const handleSubmit = async (event) => {
@@ -23,9 +20,6 @@ export default function CreateGame(){
             const data = await response.json()
             console.log(data)
             if (data ) {
-                console.log("dados"+data.dice1,data.dice2)
-                setDice1(data.dice1)
-                setDice2(data.dice2)
                 dispatch({
                     type: 'GETDICEVAL',
                     payload: data
@@ -44,15 +38,14 @@ export default function CreateGame(){
 
     return (
         <div className='NewPlayer'>
-        <h1>Te sientes con suerte? 🎲🎲</h1>
+        <h4>Te sientes con suerte?</h4>
+        <h4>Haz click en "Nueva partida" y tira los dados! 🎲🎲</h4>
             <div className="login-form">
                 <form onSubmit={handleSubmit}>
                     <button type="submit">Nueva partida</button>
                 </form>
             </div>
-            <Dices />
             <section className='results'>
-                
             </section>
         </div>
   )
